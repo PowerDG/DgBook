@@ -10,7 +10,7 @@
 
 [![复制代码](C#%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89%EF%BC%9ALambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F.assets/copycode.gif)](javascript:void(0);)
 
-```
+```csharp
     class Program
     {
         static void Main(string[] args)
@@ -38,7 +38,7 @@
 
 [![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-```
+```csharp
         static void Main(string[] args)
         {
             //能够根据委托推断出参数的列表类型，比匿名函数更简单
@@ -63,7 +63,7 @@
 
 所有 Lambda 表达式都使用 Lambda 运算符 =>，该运算符读为"goes to"。 该 Lambda 运算符的左边是输入参数（如果有），右边包含表达式或语句块。 Lambda 表达式 x => x * x 读作"x goes to x times x"。这句话可以简单的总结为Lambda 表达式的语法结构：
 
-```
+```csharp
 （输入参数）=> 表达式
 ```
 
@@ -71,14 +71,14 @@
 
 （1）当Lambda 只有一个输入参数时，可以省略括号，但其他情况是必须要加的。
 
-```
+```csharp
             //当只有一个输入参数时，可以省略括号
             AnonyDelegate ad = str =>{ Console.WriteLine(str); };
 ```
 
 （2）当只有一个空的括号时，表示没有参数。
 
-```
+```csharp
             AnonyDelegate2 ad2 = () => { Console.WriteLine("Hello World"); };
            //申明委托
             public delegate void AnonyDelegate2();
@@ -86,7 +86,7 @@
 
 （3）当lambda表达式中的匿名函数的方法体如果只有一句话，并且是返回值，那么可以省略{}以及return，就把=>后的表达式做为返回值
 
-```
+```csharp
         //申明委托
         public delegate bool AnonyDelegate3(string str);
         AnonyDelegate3 ad3 = (str) => str == "Hello World";
@@ -107,7 +107,7 @@ Lambda 在基于方法的 LINQ 查询中用作标准查询运算符方法（如 
 
 [![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-```
+```csharp
             int[] values = { -8, 2, 13, -5, 9 };
             IEnumerable<int> result = values.Where(s => s > 0);
             foreach (var val in result)
@@ -121,7 +121,7 @@ Lambda 在基于方法的 LINQ 查询中用作标准查询运算符方法（如 
 
  那么为什么直接可以使用该方法呢？我们转到where的方法定义，可以看到
 
-```
+```csharp
 public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
