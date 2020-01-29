@@ -66,9 +66,13 @@ Chris Richardson 曾经在[他的博客](http://microservices.io/patterns/apigat
 
 > **王延炯**：Netflix 的 API GW，主要是指 Zuul, Netflix  将他们用于自己的三大场景： Website Service, API Service, Streaming  Service。其中前两个定位与我的前两个分类：Web App, Mobile App 比较类似，第三个 Streaming Service  主要是 netflix 的核心视频业务所形成的特有形态。
 >
-> Netflix 在 Zuul 的实现上，主要特色是：Filter 的 PRE ROUTING POST ERROR（PRPE  模型），以及采用 Groovy 脚本的 Filter 实现机制、采用 Cassandra 作为 filter repository 的机制。
+> Netflix 在 Zuul 的实现上，主要特色是：Filter 的 PRE ROUTING POST ERROR（PRPE  模型），以及
 >
-> Filter 以及 Filter 的 PRPE 模型，是**典型的「前正后反模型」的实现，**为集成的标准化做好了框架层面的铺垫。
+> 采用 **Groovy** 脚本的 Filter 实现机制、
+>
+> 采用 **Cassandra** 作为 filter repository 的机制。
+>
+> Filter 以及 Filter 的 **PRPE** 模型，是**典型的「前正后反模型」的实现，**为集成的标准化做好了框架层面的铺垫。
 >
 > Netflix 其实并没有对 API GW  进行深入的功能实现（或者说面相业务友好的相关功能），整体上它只提供了一个技术框架、和一些标准的 filter 实例实现，相信了解过 filter chain 原理的分布式中间件工程师也能搭出这样的框架。这么做的原因，我认为很大原因是 <u>API GW  **所扮演的角色是一个业务平台**，而非技术平台，将行业特征很强的业务部分开源，对于受众意义也不是特别大。</u>
 
@@ -164,7 +168,7 @@ Chris Richardson 曾经在[他的博客](http://microservices.io/patterns/apigat
 > - 通信会话的**秘钥协商，报文**的加密与解密 
 > - 日常**流控**与应急屏蔽 
 > - 内部响应报文的场景化裁剪 
-> - 支持「前正后反模型」的集成框架 
+> - 支持「前正后反模型」的集成框架 【 **PRPE** 模型】
 > - 报文格式的转换 
 > - **业务路由**的支撑 
 > - 客户端优先的**超时机制** 
