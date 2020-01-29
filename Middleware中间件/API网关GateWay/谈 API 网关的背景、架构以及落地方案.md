@@ -68,9 +68,11 @@ Chris Richardson 曾经在[他的博客](http://microservices.io/patterns/apigat
 >
 > Netflix 在 Zuul 的实现上，主要特色是：Filter 的 PRE ROUTING POST ERROR（PRPE  模型），以及采用 Groovy 脚本的 Filter 实现机制、采用 Cassandra 作为 filter repository 的机制。
 >
-> Filter 以及 Filter 的 PRPE 模型，是典型的「前正后反模型」的实现，为集成的标准化做好了框架层面的铺垫。
+> Filter 以及 Filter 的 PRPE 模型，是**典型的「前正后反模型」的实现，**为集成的标准化做好了框架层面的铺垫。
 >
-> Netflix 其实并没有对 API GW  进行深入的功能实现（或者说面相业务友好的相关功能），整体上它只提供了一个技术框架、和一些标准的 filter 实例实现，相信了解过 filter chain 原理的分布式中间件工程师也能搭出这样的框架。这么做的原因，我认为很大原因是 API GW  所扮演的角色是一个业务平台，而非技术平台，将行业特征很强的业务部分开源，对于受众意义也不是特别大。另外，除了 Netflix  Zuul，在商业产品上还有 apigee 公司所提供的方案，在轻量级开源实现上还有基于 Nginx 的[ kong ](https://github.com/Mashape/kong)，kong 其实提供了 19 个插件式的功能实现，涵盖的面主要在于安全、监控等领域，但缺少对报文转换的能力（为什么缺 也很显而易见——避免产生业务场景的耦合，更通用）。
+> Netflix 其实并没有对 API GW  进行深入的功能实现（或者说面相业务友好的相关功能），整体上它只提供了一个技术框架、和一些标准的 filter 实例实现，相信了解过 filter chain 原理的分布式中间件工程师也能搭出这样的框架。这么做的原因，我认为很大原因是 <u>API GW  **所扮演的角色是一个业务平台**，而非技术平台，将行业特征很强的业务部分开源，对于受众意义也不是特别大。</u>
+>
+> 另外，除了 Netflix  Zuul，在商业产品上还有 apigee 公司所提供的方案，在轻量级开源实现上还有基于 Nginx 的[ kong ](https://github.com/Mashape/kong)，kong 其实提供了 19 个插件式的功能实现，涵盖的面主要在于安全、监控等领域，但缺少对报文转换的能力（为什么缺 也很显而易见——避免产生业务场景的耦合，更通用）。
 >
 > 另外，还有基于 TCP 协议的 GW，比如携程无线应用的后端实现有 HTTP 和 TCP 两种，有兴趣的读者也可以深入关注。
 
