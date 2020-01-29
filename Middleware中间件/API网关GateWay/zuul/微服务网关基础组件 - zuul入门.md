@@ -1,8 +1,8 @@
 ​		 [第二章 微服务网关基础组件 - zuul入门](https://www.cnblogs.com/java-zhao/p/6656518.html) 	
 
-**一、zuul简介**
+## **一、zuul简介**
 
-**1、作用**
+### **1、作用**
 
 zuul使用一系列的filter实现以下功能
 
@@ -14,12 +14,12 @@ zuul使用一系列的filter实现以下功能
 - 限流 - allocating capacity for each type of request and dropping requests that go over the limit
 - 静态响应 - 直接在网关返回一些响应，而不是通过内部的服务返回响应
 
-**2、组件：**
+### **2、组件：**
 
 - zuul-core：library which contains the core functionality of compiling and executing [Filters](https://github.com/Netflix/zuul/wiki/Filters)
 - zuul-netflix：library which adds other NetflixOSS components to Zuul - using Ribbon for routing requests, for example.
 
-**3、例子：**
+### **3、例子：**
 
 - zuul-simple-webapp：webapp which shows a simple example of how to build an application with zuul-core
 - zuul-netflix-webapp：webapp which packages zuul-core and zuul-netflix together into an easy to use package
@@ -28,9 +28,9 @@ github地址：https://github.com/Netflix/zuul/
 
  
 
-**二、zuul filter**
+## **二、zuul filter**
 
-**1、关键元素**
+### **1、关键元素**
 
 - Type：most often defines the stage during the routing flow when the Filter will be applied (although it can be any custom string)
   - 值可以是：pre、route、post、error、custom
@@ -47,7 +47,7 @@ github地址：https://github.com/Netflix/zuul/
 - zuul可以动态的read, compile, and run these Filters
   - 被更新后的filter会被从disk读取到内存，并动态编译到正在运行的server中，之后可以用于其后的每一个请求（Updated  filters are read from disk, dynamically compiled into the running  server, and are invoked by Zuul for each subsequent request）
 
-**2、filter type**（与一个典型的request的生命周期相关的filter type）
+### **2、filter type**（与一个典型的request的生命周期相关的filter type）
 
 - PRE Filters
 
@@ -81,7 +81,7 @@ github地址：https://github.com/Netflix/zuul/
 
  
 
-**三、zuul request lifecycle（filter流）**
+## **三、zuul request lifecycle（filter流）**
 
 ![img](%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%20-%20zuul%E5%85%A5%E9%97%A8.assets/866881-20170106171654316-977255062.png)
 
@@ -89,7 +89,7 @@ github地址：https://github.com/Netflix/zuul/
 
  
 
-**四、zuul核心架构**
+## **四、zuul核心架构**
 
 ![img](%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%20-%20zuul%E5%85%A5%E9%97%A8.assets/866881-20170106191748566-1274562936.png)
 
