@@ -8,7 +8,7 @@
 
 ## 序
 
-　　感谢大家的支持，这是昨天发布《[走进异步编程的世界 - 剖析异步方法（上）](http://www.cnblogs.com/liqingwen/p/5844095.html)》的补充篇。
+　感谢大家的支持，这是昨天发布《[走进异步编程的世界 - 剖析异步方法（上）](http://www.cnblogs.com/liqingwen/p/5844095.html)》的补充篇。
 
  
 
