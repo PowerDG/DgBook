@@ -321,7 +321,7 @@ public class HelloWord implements IHelloWord {
 
 ###### C#（使用(入参)=>{方法处理体}，与要传入或要实例化的委托方法签名相同即可）
 
-```
+```csharp
             #region 4.Lambda
 
             Func<int, int, int> multiplyFunc2 = new Func<int, int, int>((a, b) => a * b);
