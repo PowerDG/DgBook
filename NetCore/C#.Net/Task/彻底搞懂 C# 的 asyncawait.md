@@ -6,7 +6,7 @@
 
 Talk is cheap, Show you the code first！
 
-```
+```csharp
 Copy
 Copyprivate void button1_Click(object sender, EventArgs e)
         {
