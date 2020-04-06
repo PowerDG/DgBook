@@ -114,7 +114,7 @@ dotnet add package  Npgsql.EntityFrameworkCore.PostgreSQL.Design
 **Update-Database**
 
 ```
-Add-Migration Init
+Add-Migration InitCube
 Update-Database
 ```
 
