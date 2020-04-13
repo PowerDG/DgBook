@@ -32,6 +32,10 @@ npm install @vue/cli -g
 npm uninstall vue-cli -g
 ```
 
+## [Vue 2.x]
+
+## [用Vue创建一个新的项目](https://www.cnblogs.com/benyu-aimao/p/8944475.html)
+
 
 
 ## cnpm
@@ -42,10 +46,13 @@ vue项目环境搭建及一个简单的vue例子
 
 https://blog.csdn.net/qq_33036599/article/details/79656597
 
-```
+```bash
 npm install -g vue-cli 
 或者使用国内的淘宝镜像 
 npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+Then
+cnpm install -g vue-cli 
 ```
 
 
@@ -54,7 +61,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ## init webpack
 
-## [用Vue创建一个新的项目](https://www.cnblogs.com/benyu-aimao/p/8944475.html)
+## 
 
 https://www.cnblogs.com/benyu-aimao/p/8944475.html
 
