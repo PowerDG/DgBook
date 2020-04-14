@@ -4,10 +4,6 @@
 
 ## [vue-cli的安装及版本查看更新](https://www.cnblogs.com/wyongz/p/11505048.html)
 
-
-
-
-
 vue-cli安装
 
 ```
@@ -52,7 +48,9 @@ npm install -g vue-cli
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 Then
+cnpm i vue -g
 cnpm install -g vue-cli 
+cnpm install vue
 ```
 
 
@@ -67,6 +65,9 @@ https://www.cnblogs.com/benyu-aimao/p/8944475.html
 
 ```
 vue init webpack my-project
+vue init webpack my_dg_cube
+
+
 ```
 
 https://www.cnblogs.com/hongdada/p/9145574.html
@@ -74,7 +75,7 @@ https://www.cnblogs.com/hongdada/p/9145574.html
 
 
 ```
-cnpm i
+c
 
 npm run dev
 ```
