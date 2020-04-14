@@ -73,6 +73,16 @@ https://www.cnblogs.com/hongdada/p/9145574.html
 
 
 
+```
+cnpm i
+
+npm run dev
+```
+
+
+
+
+
 # ant-design-vue
 
 ### 使用 npm 或 yarn 安装 [#](https://www.antdv.com/docs/vue/introduce-cn/#使用-npm-或-yarn-安装)
