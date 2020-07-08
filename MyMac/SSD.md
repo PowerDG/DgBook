@@ -1,6 +1,42 @@
+# SSD
 
 
-# 没找到女朋友的你，不妨先买这些SSD 
+
+
+
+**git fetch origin dev（dev为远程仓库的分支名）**
+
+git fetch origin test
+
+# Intel
+
+
+
+
+
+那些别的牌子所谓oem卖的和我图上^O^清零英特尔s3500一个价甚至更便宜的自己想喽。
+
+为什么二手固态只有英特尔值得买 - Aerofics的文章 - 知乎 https://zhuanlan.zhihu.com/p/82106179
+
+
+
+，p4500/p3600/s3610因为英特尔自家主控通电时间是没法清零的
+
+(前排提醒英特尔企业级固态请买代号1/2的别买0的，比如s3700/p4500就是小批量试水的，s3710和p4510才是大批量生产的稳定品)
+
+那款固态硬盘可靠性高？ - Aerofics的文章 - 知乎 https://zhuanlan.zhihu.com/p/81919362
+
+
+
+
+
+M600 1TB   intel S3500
+
+【卖萌推荐】近期值得买的大船SSD - 渐缜的文章 - 知乎 https://zhuanlan.zhihu.com/p/60382461
+
+
+
+# 没找到女朋友的你，不妨先买这些SSD
 
 - 什么值得买的文章 - 知乎 https://zhuanlan.zhihu.com/p/57383206
 
