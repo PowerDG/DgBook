@@ -2,6 +2,12 @@
 
 
 
+
+
+**git fetch origin dev（dev为远程仓库的分支名）**
+
+git fetch origin test
+
 # Intel
 
 
