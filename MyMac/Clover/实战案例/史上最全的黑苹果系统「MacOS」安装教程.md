@@ -404,7 +404,10 @@ https://pan.baidu.com/s/1aTpLhOHMnJjXiIQVAYOfuQ 提取码:60d8
 
 \11. 重启几次后，进入系统。
 
-![img](%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8%E7%9A%84%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E3%80%8CMacOS%E3%80%8D%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.assets/aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X2pwZy9TUDM1UDlpYkFnNUdsVlE3SzV2YVNHaWFoQVRST3c3N25xTnQzcXEzQXpRQnJLZGoyRWlja3FxNkFDM2dUb2liaWJpYldoQWlhV0dkbGxQY0VyZG5mV25tbzROaWJRLzY0MA)
+
+
+![img](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X2pwZy9TUDM1UDlpYkFnNUdsVlE3SzV2YVNHaWFoQVRST3c3N25xTnQzcXEzQXpRQnJLZGoyRWlja3FxNkFDM2dUb2liaWJpYldoQWlhV0dkbGxQY0VyZG5mV25tbzROaWJRLzY0MA?x-oss-process=image/format,png)
+
 
 
 \12. 进入系统后，修改的你的 EFI 文件，通过 clover configurator 挂载你的 U 盘的 efi 分区，然后打开你的  config 文件，去掉 -v 启动参数，启动时就不会跑代码，直接就是 macOS 的开机动画，然后勾选上一些你需要的选项。
