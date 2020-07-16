@@ -1,4 +1,4 @@
-# Using Clover 							 						
+# Using Clover
 
 
 
@@ -17,7 +17,7 @@ https://www.tonymacx86.com/threads/how-to-install-os-x-yosemite-using-clover.144
  A few more changes need to be made to the default Clover installation:
 
 
-​
+
 
 \20. Navigate to **/EFI/CLOVER/** and replace default **config.plist** with attached **config.plist\*
 ** 21. Navigate to **/EFI/CLOVER/kexts/** and create a folder called **10.10**
@@ -34,7 +34,7 @@ https://www.tonymacx86.com/threads/how-to-install-os-x-yosemite-using-clover.144
  A few more changes need to be made to the default Clover installation:
 
 
-​
+
 
 \20. Navigate to **/EFI/CLOVER/** and replace default **config.plist** with attached **config.plist\*
 ** 21. Navigate to **/EFI/CLOVER/kexts/** and create a folder called **10.10**
@@ -45,3 +45,72 @@ https://www.tonymacx86.com/threads/how-to-install-os-x-yosemite-using-clover.144
  \26. (Optional) Navigate to **/EFI/CLOVER/ACPI/patched/** and add **DSDT.aml** and **SSDT.aml 
 ** 
  *See attached **config.plist** for a working minimal configuration. 
+
+
+
+# EFI文件的修改
+
+https://www.jianshu.com/p/81e329c50120
+
+当然这并没有什么不同，只是自己望着比较顺眼，哈哈！
+ ============================================================
+
+## 3、config.plist：
+
+ CLOVER配置文件详细说明见我以前写的一篇教程。
+
+MAC 10.14 安装教程4-制作安装EFI文件
+ https://www.jianshu.com/p/2ad57fca5969
+
+这里，在MAC系统下将其使用Clover Configurator工具的配置过程加以说明
+
+### 打开config.plist文件：
+
+
+
+![img](https:////upload-images.jianshu.io/upload_images/14998277-c3484c54f18c4678.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+
+10.png
+
+
+
+点击红圈勾选出按钮
+
+![img](https:////upload-images.jianshu.io/upload_images/14998277-d6f97416ef2fe920.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+
+11.png
+
+
+
+### 勾选“ADDPNLF”选项，其作用显示亮度调节滑块，勾选后如下图：
+
+![img](https:////upload-images.jianshu.io/upload_images/14998277-61396abb2f9cd374.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+
+12.png
+
+
+
+### 点击左侧“Boot”选项页。 r
+
+ 通过点击下图中红圈勾选处的减号按键取消篮圈勾选处的启动参数：
+
+![img](https:////upload-images.jianshu.io/upload_images/14998277-8c3c6831a276a017.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+
+13.png
+
+
+
+上图中蓝色圈勾选处参数为开机跑代码，以方便排查错误。
+
+
+
+作者：爅璃
+链接：https://www.jianshu.com/p/81e329c50120
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+
+
+
+# END
