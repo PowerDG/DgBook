@@ -329,7 +329,8 @@ OpenCore 的配置建议遵循从简原则, 先确保能进系统再来增加其
 
 - **DevirtualiseMmio:** `YES`
 
-  - 开启后会减少 Stolen 内存占用空间，扩大 `Slide = N` 值的范围, 适用于大多数主板
+  - 开启后会**减少 Stolen 内存占用空间**，扩大 `Slide = N` 值的范围, 适用于大多数主板
+  - 
 
 - **DisableSingleUser:** `NO`
 
@@ -380,6 +381,10 @@ OpenCore 的配置建议遵循从简原则, 先确保能进系统再来增加其
 - **SignalAppleOS:** `NO`
 
   - 通过 OS Info 将 macOS 加载的信息报告给其它操作系统, 用于在 Windows 中为 MacBook 启用 iGPU
+  
+- ？？？？RebuildAppleMemoryMap
+
+  - ??????????????
 
 ###  DeviceProperties 设备属性
 
@@ -389,7 +394,9 @@ OpenCore 的配置建议遵循从简原则, 先确保能进系统再来增加其
 
 ------
 
-**Add:** 添加 `_DSM` 设备属性
+**Add:** 添加 `_DSM` 设备属
+
+【**=====？？？？？？？**】
 
 ```
 PciRoot(0x0)/Pci(0x2,0x0)
@@ -527,7 +534,9 @@ PciRoot(0x0)/Pci(0x1f, 0x3)` → `Layout-id
 
   - 禁用 AppleIntelCpuPowerManagement 原生电源管理, 用于更好的替代 NullCpuPowerManagement.kext
 
-- ExternalDiskIcons:
+- **ExternalDiskIcons:**
+
+  - 作为外接硬盘
 
   ```
   YES
@@ -561,6 +570,8 @@ PciRoot(0x0)/Pci(0x1f, 0x3)` → `Layout-id
 
 - PowerTimeoutKernelPanic:
 
+  - 电源
+
   ```
   YES
   ```
@@ -578,10 +589,12 @@ PciRoot(0x0)/Pci(0x1f, 0x3)` → `Layout-id
 
 - XhciPortLimit:
 
+  - ？？？？？？？？？？？？？
+  
   ```
-  YES
+YES
   ```
-
+  
   - 这实际上是 15 端口限制补丁, 不建议依赖, 因为这不是 USB 的最佳解决方案。有能力的情况下请选择定制 [USB](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html#定制usb), 这个选项适用于没有定制 USB 的设备
 
 
@@ -608,6 +621,8 @@ PciRoot(0x0)/Pci(0x1f, 0x3)` → `Layout-id
   - `RTC`: RTC 模式
 
 - **HideAuxiliary:** `YES`
+
+- ???????????????
 
   - 默认隐藏以下引导项, 按空格键显示全部
     - macOS 恢复
@@ -654,6 +669,8 @@ PciRoot(0x0)/Pci(0x1f, 0x3)` → `Layout-id
 - 设置为 `YES` 时会朗读屏幕上选择项的内容, 需要提提前在 EFI 中放入音频文件并正确设置下文的 **Audio** 章节
 
 - **PollAppleHotKeys:** `YES`
+
+  - ？？？？？？？
 
   - 设置为 
 
@@ -727,9 +744,13 @@ PciRoot(0x0)/Pci(0x1f, 0x3)` → `Layout-id
 
 - **AllowNvramReset:** `YES`
 
+- ?????
+
   - 允许在引导选择界面和快捷键 `Cmd + Opt + P + R` 按下时重置 NVRAM
 
 - **AllowSetDefault:** `YES`
+
+- ????
 
   - 允许使用 `CTRL + 回车` 和 `CTRL + 数字` 锁定默认启动项
 
@@ -742,7 +763,7 @@ PciRoot(0x0)/Pci(0x1f, 0x3)` → `Layout-id
   - `3` 将 OpenCore 的启动路径和版本储存进 NVRAM
   - `11` 在 `3` 的基础上添加主板 OEM 信息, [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2) 和 [NVMeFix](https://github.com/acidanthera/NVMeFix) 需要主板 OEM 信息才能正常工作
 
-- **Vault:** `Optional`
+- **Vault:** `Optional`???????Secure
 
   > OpenCore 自身的加密和安全保护, 具体参考官方文档
 
