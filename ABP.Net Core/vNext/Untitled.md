@@ -11,3 +11,4 @@
 
 
 dotnet ef database update --project /Users/powerdg/aspnet-core/src/PowerDg.DgCube.EntityFrameworkCore.DbMigrations/PowerDg.DgCube.EntityFrameworkCore.DbMigrations.csproj
+
