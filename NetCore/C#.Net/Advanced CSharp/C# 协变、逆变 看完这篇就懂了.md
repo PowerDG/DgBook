@@ -148,7 +148,7 @@
 
 
 
-```
+```csharp
 interface IFoo<in T> { }// 应该是 ininterface IBar<in T>{    void Print(IFoo<T> foo);}// 还是应该是 outinterface IBar<out T>{    void Print(IFoo<T> foo);}
 ```
 
