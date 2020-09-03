@@ -136,25 +136,185 @@ https://blog.csdn.net/weixin_33860722/article/details/85550270
 
 ## 前端部分：
 
-1. documen.write和 innerHTML的区别2、行内元素有哪些?块级元素有哪些?空(void)元素有那些?
-  3、页面导入样式时，使用link和@import有什么区别?
-  4、CSS选择符有哪些?
+### 1。documen.write和 innerHTML的区别
+
+
+
+###### 1、联系
+
+document.write()和innerHTML都能够动态地向文档中添加标记。
+
+
+
+###### 2、区别：
+
+①document.write()必须使用script标签才能被调用。违背了“行为与表现分离的原则”，即无法实现JavaScript和HTML的分离。
+ ②document.write()容易导致验证错误。比如在例①中，<script>标签后面很容易认为是<p>标签，而在<script>标签后面打开<p>标签是非法的。事实上，那个“<p>”和“</p>”只不过是一个将被插入文档的字符串的组成部分而已。
+ ③document.write与MIME类型application/xhtml+xml不兼容，浏览器在呈现这种XHTML文档时根本不会执行document.write()方法。
+ ④document.write()仅支持写入
+ ⑤innerHTML可以实现JavaScript和HTML的分离。
+ ⑥innerHTML既支持读取，又支持写入。
+
+综上所述：推荐使用innerHTML，不推荐使用document.write().
+
+
+
+作者：迷人的洋葱葱
+链接：https://www.jianshu.com/p/752a06089197
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+
+### 2、行内元素有哪些?块级元素有哪些?空(void)元素有那些?
+
+```
+首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。
+（1）行内元素有：a b span img input select strong（强调的语气）
+（2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p
+（3）常见的空元素：
+    <br> <hr> <img> <input> <link> <meta>
+    鲜为人知的是：
+    <area> <base> <col> <command> <embed> <keygen> <param> <source> <track> <wbr>
+```
+
+
+
+### 3、页面导入样式时，使用link和@import有什么区别?
+
+https://blog.csdn.net/luuu7/article/details/71080051
+
+外部样式表另一种写法：
+ <style type=”text/css”>
+   @import url（“a.css”）；
+ </style>
+ 与link区别：
+ 1.老祖宗的差别。link属于XHTML标签，而@import完全是CSS提供的一种方式。link标签除了可以加载CSS外，还可以做很多其它的事情，比如定义RSS，定义rel连接属性等，@import就只能加载CSS了。 　　
+ 2.加载顺序的差别。当一个页面被加载的时候（就是被浏览者浏览的时候），link引用的CSS会同时被加载，而@import引用的CSS  会等到页面全部被下载完再被加载。所以有时候浏览@import加载CSS的页面时开始会没有样式（就是闪烁），网速慢的时候还挺明显（梦之都加载CSS 的方式就是使用@import，一边下载一边浏览梦之都网页时，就会出现上述问题）。 　　
+ 3.兼容性的差别。由于@import是CSS2.1提出的所以老的浏览器不支持，@import只有在IE5以上的才能识别，而link标签无此问题。 　　
+ 4.使用dom控制样式时的差别。当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的。
+
+
+
+https://cloud.tencent.com/developer/article/1498663
+
+##### [link](http://www.javanx.cn/tag/link/)和[@import](http://www.javanx.cn/tag/import/)有什么区别
+
+**区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。**
+
+**区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。所以会出现一开始没有**[**css**](http://www.javanx.cn/tag/css/)**样式，闪烁一下出现样式后的页面(网速慢的情况下)**
+
+**区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。**
+
+**区别4：link支持使用Javascript控制DOM去改变样式；而@import不支持。在html设计制作中，css有四种引入方式。**
+
+###   4、CSS选择符有哪些?
+
+
+
+https://www.cnblogs.com/miluluyo/p/11134342.html
+
+  1.id选择器（#id）
+
+2.类选择器（.class）
+
+3.标签选择器（div，h1，p）
+
+4.相邻选择器（h1 + p）
+
+5.子选择器（ul > li）
+
+6.后代选择器（li a）
+
+7.通配符选择器（ * ）
+
+8.属性选择器（a[title]）
+
+9.伪类选择器（a:hover，li:nth-child）
 
   
 
   
 
-  
+### 5、JQuery和Vue.js的区别
 
-  ### 5、JQuery和Vue.js的区别
+1.jQuery首先要获取到dom对象，然后对dom对象进行进行值的修改等操作
+2.Vue是首先把值和js对象进行绑定，然后修改js对象的值，Vue框架就会自动把dom的值就行更新。
+3.可以简单的理解为Vue帮我们做了dom操作，我们以后用Vue就需要修改对象的值和做好元素和对
+象的绑定，Vue这个框架就会自动帮我们做好dom的相关操作
+4.这种dom元素跟随JS对象值的变化而变化叫做单向数据绑定，如果JS对象的值也跟随着dom元素的
+
+值的变化而变化就叫做双向数据绑定
+
+简单来说，最明显的就是思维方式不同，jquery  是以操作dom为主，做了数据处理之后还需要对dom进行操作。vue.js是以操作数据为主，不操作dom，也就是传说中的双向数据绑定，你只需要操作数据就好，dom自动更新。这只是对初学者来说最大的不同。jquery只是一个类库，只是提供了很多的方法，不能算框架，而vue.js是一个框架，有一套完整的体系。所以jquery自然不能和vue比。
+
+1、工作原理
+
+Vue做到了数据和视图完全分离开，它首先把值和js对象进行绑定，然后修改js对象的值，Vue框架就会自动把dom的值就行更新。对数据进行操作不再需要引用相应的dom对象，他们通过Vue对象实现数据和视图的相互绑定。
+
+jQuery则是要先使用选择器（$）来选取dom对象，然后对dom对象进行操作（如赋值、取值、事件绑定等）。
+
+2、侧重
+
+vue侧重数据绑定，可以应用于复杂数据操作的后台页面。如：表单填写页面
+
+jquery侧重样式操作，动画效果等；可以应用于一些html5的动画页面，一些需要js来操作页面样式的页面中。
+
+\---------------------
+本文著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+来源地址：https://www.php.cn/js-tutorial-412970.html
+来源：php中文网(www.php.cn)
+© 版权声明：转载请附上原文链接！
+
+
 
   6、JavaScript中，如何将以下obj1和obj2合并成last对象 var obj1 = ( name：’Jack'， age：234 )
   var obj2 = ( job：’Worker'， location：’Shanghai' )
   var last = ( name：'Jack'， age：234， job：’Worker'， location：’Shanghai' )
 
-数据库部分：
+## 数据库部分：
+
 1. 查询语句不同元素 (where， jion， limit. group by. having 等等) 执行先后顺序?
-2、哪些列适合建立索引、哪些不适合建索引?
-3、数据库三范式是什么?
-4、什么是内连接、外连接、交义连接、笛卡尔积等?
-5. drop. truncate. delete 区别1
+
+
+
+
+
+```
+执行顺序 ：from >  on > where > Group by > having > select > DISTINCT > order by > TOP
+
+(8)SELECT (9)DISTINCT (11)<Top Num> <select list>
+(1)FROM [left_table]
+(3)<join_type> JOIN <right_table>
+(2)ON <join_condition>
+(4)WHERE <where_condition>
+(5)GROUP BY <group_by_list>
+(6)WITH <CUBE | RollUP>
+(7)HAVING <having_condition>
+(10)ORDER BY <order_by_list>
+
+逻辑查询处理阶段简介
+FROM：对FROM子句中的前两个表执行笛卡尔积（Cartesian product)(交叉联接），生成虚拟表VT1
+ON：对VT1应用ON筛选器。只有那些使<join_condition>为真的行才被插入VT2。
+OUTER(JOIN)：如 果指定了OUTER JOIN（相对于CROSS JOIN 或(INNER JOIN),保留表（preserved table：左外部联接把左表标记为保留表，右外部联接把右表标记为保留表，完全外部联接把两个表都标记为保留表）中未找到匹配的行将作为外部行添加到 VT2,生成VT3.如果FROM子句包含两个以上的表，则对上一个联接生成的结果表和下一个表重复执行步骤1到步骤3，直到处理完所有的表为止。
+WHERE：对VT3应用WHERE筛选器。只有使<where_condition>为true的行才被插入VT4.
+GROUP BY：按GROUP BY子句中的列列表对VT4中的行分组，生成VT5.
+CUBE|ROLLUP：把超组(Suppergroups)插入VT5,生成VT6.
+HAVING：对VT6应用HAVING筛选器。只有使<having_condition>为true的组才会被插入VT7.
+SELECT：处理SELECT列表，产生VT8.
+DISTINCT：将重复的行从VT8中移除，产生VT9.
+ORDER BY：将VT9中的行按ORDER BY 子句中的列列表排序，生成游标（VC10).
+
+TOP：从VC10的开始处选择指定数量或比例的行，生成表VT11,并返回调用者。
+
+
+
+```
+
+
+
+1. 2、哪些列适合建立索引、哪些不适合建索引?
+  3、数据库三范式是什么?
+  4、什么是内连接、外连接、交义连接、笛卡尔积等?
+2. drop. truncate. delete 区别1
